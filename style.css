@@ -154,3 +154,39 @@ nav a {
         justify-content: center;
     }
 }
+
+/* Container holding the image and text */
+.publication {
+    display: flex;             /* This is the magic command that puts them side-by-side */
+    align-items: flex-start;   /* Aligns both the image and text to the top */
+    gap: 1.5rem;               /* Adds a nice gap between the image and the text */
+    margin-bottom: 2.5rem;     /* Adds space below the entire publication entry */
+}
+
+/* The image itself */
+.pub-thumb {
+    width: 220px;              /* Shrinks the image down to a reasonable width */
+    height: auto;              /* Keeps the image proportions from stretching */
+    flex-shrink: 0;            /* Prevents the text from squishing the image too small */
+    
+    /* Optional: matches the clean style from your screenshot */
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* The text area */
+.pub-details {
+    flex: 1;                   /* Tells the text to take up all remaining horizontal space */
+}
+
+/* Mobile Responsiveness (Stacks them on small screens like phones) */
+@media (max-width: 768px) {
+    .publication {
+        flex-direction: column; 
+    }
+    .pub-thumb {
+        width: 100%;
+        max-width: 300px;
+    }
+}
