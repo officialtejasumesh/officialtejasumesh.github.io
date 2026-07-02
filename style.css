@@ -190,3 +190,32 @@ nav a {
         max-width: 300px;
     }
 }
+
+.date-badge {
+    /* Makes it act like the thumbnail image */
+    width: 200px;
+    flex-shrink: 0;
+    
+    /* Recreates the visual styling from your screenshot */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    
+    /* Aligns the text inside the box to the center */
+    text-align: center;
+    
+    /* Nudges the badge down perfectly level with the h3 title */
+    margin-top: 4px; 
+}
+
+/* Mobile adjustment so it stacks cleanly on phones */
+@media (max-width: 768px) {
+    .date-badge {
+        width: fit-content;
+        margin-bottom: 1rem;
+    }
+}
